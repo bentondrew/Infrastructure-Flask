@@ -16,4 +16,4 @@ ADD service/test_hello.py .
 ENV FLASK_APP test_hello.py
 USER python_user
 ENTRYPOINT ["python3", "-m", "flask", "run"]
-CMD ["host=127.0.0.2", "port=5001"]
+CMD ["--host=127.0.0.2", "--port=5001"]
