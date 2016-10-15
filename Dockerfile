@@ -15,4 +15,5 @@ RUN apk add --no-cache ca-certificates wget gcc python3-dev musl-dev && \
 ADD service/test_hello.py .
 ENV FLASK_APP test_hello.py
 USER python_user
-CMD ["-m", "flask", "run"]
+ENTRYPOINT ["python3", "-m", "flask", "run"]
+CMD ["host=127.0.0.2", "port=5001"]
