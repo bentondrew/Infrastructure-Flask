@@ -1,4 +1,4 @@
-FROM drewantech/python3:1.0.1
+FROM drewantech/python3:1.1.1
 MAINTAINER Benton Drew <benton.s.drew@drewantech.com>
 USER root
 RUN apk add --no-cache ca-certificates wget gcc python3-dev musl-dev && \
