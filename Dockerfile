@@ -3,14 +3,14 @@ MAINTAINER Benton Drew <benton.s.drew@drewantech.com>
 USER root
 RUN apk add --no-cache ca-certificates wget gcc python3-dev musl-dev && \
   update-ca-certificates && \
-  wget https://pypi.python.org/packages/dc/ca/c0ed9cc90c079085c698e284b672edbc1ffd6866b1830574095cbc5b7752/Flask-0.11.tar.gz#md5=89fbdcb04b7b96c5b24625ae299cf48b && \
-  tar xvzf Flask-0.11.tar.gz && \
-  cd Flask-0.11/ && \
+  wget https://pypi.python.org/packages/eb/12/1c7bd06fcbd08ba544f25bf2c6612e305a70ea51ca0eda8007344ec3f123/Flask-0.12.2.tar.gz#md5=97278dfdafda98ba7902e890b0289177 && \
+  tar xvzf Flask-0.12.2.tar.gz && \
+  cd Flask-0.12.2/ && \
   python3 setup.py install && \
   cd - && \
-  rm -r Flask-0.11/ && \
+  rm -r Flask-0.12.2/ && \
   rm -r /tmp && \
-  rm Flask-0.11.tar.gz && \
+  rm Flask-0.12.2.tar.gz && \
   apk del --no-cache ca-certificates wget gcc python3-dev musl-dev
 ADD service/test_hello.py .
 ENV FLASK_APP test_hello.py
